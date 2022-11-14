@@ -1,0 +1,10 @@
+<div>
+    <p>Name: {{donutDetail.name}}</p>
+    <p>Calories: {{donutDetail.calories}}</p>
+    <p>Extras</p>
+    <ul >
+        <li *ngFor="let e of donutDetail.extras">{{e}}</li>
+    </ul>
+    <img class="donutImg" src={{donutDetail.photo}} alt="photo"/>
+    <button (click)="addItem()">Add to Cart</button>
+</div>

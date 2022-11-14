@@ -1,0 +1,7 @@
+<div>
+<h1>Choose a donut!</h1>
+
+    <div *ngFor="let d of donutList.results">
+    <p> <a routerLink="/donut/{{d.id}}">{{d.name}}</a></p>
+</div>
+</div>

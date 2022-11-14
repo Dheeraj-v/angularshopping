@@ -1,0 +1,20 @@
+<h1>cart</h1>
+<table>
+  <tr>
+    <th>Donut</th>
+    <th>Quantity</th>
+    <th>Calories</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let d of getCartDistinct()">
+    <td>{{ d.name }}</td>
+    <td>{{getQuantity(d)}}</td>
+    <td>{{ d.calories }}</td>
+    <td>{{ getQuantity(d) | currency }}</td>
+    <td><button (click)="deleteItem(d)">Delete</button></td>
+  </tr>
+</table>
+
+<p>Total Calories: {{getCalories()}}</p>
+<p>Total Cost: {{getTotal() | currency}}</p>

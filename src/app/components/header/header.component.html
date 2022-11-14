@@ -1,0 +1,8 @@
+<div>
+    <span><h1>Donut shop</h1></span>
+    <h2 class="carticon">
+    <a  *ngIf="getCartCount() > 0" routerLink="/cart">Cart ({{getCartCount()}})</a>
+    <a  *ngIf="getCartCount() == 0" routerLink="/cart">Cart</a>
+    </h2>
+    <hr>
+</div>
